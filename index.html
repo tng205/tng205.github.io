@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Incorporating R into Methods and Quantitative Courses</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Chairs’ Conference - Fall 2019" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Incorporating R into Methods and Quantitative Courses
+## <html>
+<div style="float:left">
+
+</div>
+<hr color='#EB811B' size=1px width=796px>
+</html>
+### Chairs’ Conference - Fall 2019
+### Tuan Nguyen
+
+---
+
+
+
+
+# Outline
+  
+
+1. [Introduction](#intro)
+
+2. [Incorporating R into Your Courses: Challenges and Potential Solutions](#incor)
+
+3. [Going above the Basics](#above)
+
+4. [Conclusion](#conclusion)
+
+---
+
+class: inverse, center, middle
+name: intro
+
+# Introduction
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+# What is R?
+
+- R is a free, cross-platform (PC/Mac/Linux) programming language for statistical computing.
+
+- It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand.
+
+- It is named partly after the first names of the first two R authors and partly as a play on the name of S, another programming language which R is based upon.
+
+---
+
+# What is RStudio?
+
+- The basic version of R has a clunky interface that is not very appealing or intuitive. 
+
+- Many Intergrated Development Environments (IDEs) have been written to supplement basic R. 
+
+  - Very similar to the choices of IDLE, Spyder, Jupyter Notebook, PyCharm etc. as an IDE for Python.
+
+- RStudio seems to be the most popular R IDE. It supplements R with an interface that is more user-friendly and has some very neat add-ons.
+
+- Though it has commercial licenses available, the free-to-use version is more than good enough for most users. 
+
+---
+
+# Base R: Bland, Unpleasant, Unappealing
+
+&lt;img src="r.png" width="85%" style="display: block; margin: auto;" /&gt;
+---
+
+# RStudio: Exciting! Youthful! Hip! 
+
+&lt;img src="rstudio.png" width="85%" style="display: block; margin: auto;" /&gt;
+---
+
+# Why R and RStudio?
+
+- It's free! 
+
+- Along with Python, it is the preferred language for data science
+
+- There is a global community of users spanning academia and industry.
+
+  - Many popular R functions are written by users. These are called "packages".
+  
+  - Whatever it is that you want to do, chances are there's already a package that's been written to do it.
+
+- It also plays very nicely with other languages/programs that you might use already (Excel, Stata, Python, SAS, GitHub etc.)
+
+---
+
+# Why R and RStudio?
+
+&lt;img src="index_files/figure-html/indeeddotcom-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+
+# R Basics
+
+- Everything is an object.
+
+- Everything has a name.
+
+- You do things using functions.
+
+- Functions come pre-written either with base R or with packages, although you can write your own functions.
+
+- The "=" assignment operator is actually "&lt;-" or "-&gt;" in R. That is, to create a value "a" that is equal to 2 + 2, instead of typing:
+
+
+```r
+a = 2 + 2
+```
+
+- You would type:
+
+
+
+```r
+a &lt;- 2 + 2
+```
+
+- This is clearly nonsense, but oh well.
+
+---
+
+# R Basics 
+
+- As an instructor of various methods classes, I use R primarily to teach statistical analysis.
+
+- R can perform all the standard functions, such as:
+
+  - Calculating summary statistics: mean, standard deviation, max, min 
+  
+  - Conducting a statistical test: t tests, F tests, Wald tests 
+  
+  - Running a regression
+  
+  - Plotting a graph: scatterplots, line plots, maps, histograms 
+  
+  - Data wrangling and manipulation: merging, subsetting, appending, converting data format from long to wide or vice versa
+  
+---
+
+class: inverse, center, middle
+name: incor
+
+# Incorporating R into Your Courses: Challenges and Potential Solutions
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+# Challenges with Using R
+
+- R's biggest advantage is also its most annoying feature: it is open-source.
+
+- There are often many ways to do the same things. This is very confusing for first-time users.
+
+- It is also lacking in technical support. If you have a question, you are very likely on your own and will have to Google your way to the answers.
+
+- Because it is cross-platform, you might run into errors in one platform that you haven't yet seen in another.
+
+- All of these make learning R a seemingly daunting task for both instructors and students alike, but it is certainly not impossible.
+
+---
+
+# How I Learned R
+
+- I knew before I started teaching at Central that I wanted to switch to R. That made the jump easier for me, but you could make a similar switch if you determine in advance that this is what you want to do. 
+
+- In my opinion, you shouldn't wait until you feel like you have learned enough to be an expert at R to switch. You can learn as you go. 
+
+- A good first step is to be able to convert all of your current materials from your current software to R. 
+
+- This is useful because it allows you to start learning immediately **and** you know exactly what the end products would look like.
+
+---
+
+# Challenges in Learning R for Students
+
+- I found that if students have not seen a command-line programming language before, they will have a difficult time getting use to R's syntax.
+
+- Some practices I use to ease them through this initial steep learning curve:
+
+  - I guide them through the process of installing it on their laptops step-by-step.
+  
+  - I go **very** slowly through the examples that I show them in R and will stop the lecture to make sure everybody is on the same page. 
+  
+  - In showing them how a particular function works, I would explain the general syntax of the function, then write down the exact command that they need to copy to their laptops. 
+  
+---
+
+# Other Strategies for Student Successes
+
+- I use in-class tutorials to show students every function they need to use to complete homework assignments but with different data sets. They would then modify the functions in the tutorials to finish the homework. 
+
+- I also have extra credit components to encourage students to learn aspects of R that I purposefully choose to omit in class and will provide very little help on. 
+
+- A majority of them will voluntarily do these extra components.
+
+- It helps if you have a project component that allows students to use R to conduct their own analyses of a quesiton they are interested in, though this is time consuming.
+---
+
+class: inverse, center, middle
+name: above
+
+# Going above the Basics
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+# Other Cool Things You (and Your Students!) Can Do in R
+
+- *ggplot2* package for creating publication-quality graphics
+
+- *rmarkdown* typesetting package, which includes (among others):
+
+  - `\(\LaTeX\)`-like syntax and
+  
+  - The ability to create beautiful presentations with dynamically-generated results (codes, graphs, apps, etc.) 
+  
+- *shiny* package for designing interactive web apps
+
+---
+
+# The *ggplot2* package
+
+- Part of the *tidyverse* suite designed for data-related work, such as:
+
+  - Data cleaning
+  
+  - Data wrangling
+  
+  - Data visualization
+
+- Incredibly powerful tool for generating publication-quality plots 
+
+- Basic idea:
+
+  - Plots are generated in **layers**
+  
+  - Starts with some basic elements, then add or subtract anything you want
+  
+- Example: suppose we have a basic data set on earnings and demographic characteristics for a groups of workers. Let's called this data set "earnings". We want to see how schooling levels ("s") correlate with earnings ("earnings").
+
+---
+
+# A Basic Scatterplot
+
+
+```r
+plot &lt;- ggplot(earnings)
+plot &lt;- plot + geom_point(aes(y = earnings, x = s))
+plot
+```
+
+---
+
+# A Basic Scatterplot
+
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Color-Code the Data Points by Gender ("male")
+
+
+```r
+plot &lt;- ggplot(earnings)
+plot &lt;- plot + geom_point(aes(y = earnings, x = s, color = male))
+plot
+```
+
+---
+
+# Color-Code the Data Points by Gender ("male")
+
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Scaling the Data Points by Work Experience ("exp")
+
+
+```r
+plot &lt;- ggplot(earnings)
+plot &lt;- plot + geom_point(aes(y = earnings, x = s, 
+                          color = male, size = exp))
+plot
+```
+
+---
+
+# Scaling the Data Points by Work Experience ("exp")
+
+&lt;img src="index_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Drawing a Regression Line through the Data 
+
+
+```r
+plot &lt;- ggplot(earnings)
+plot &lt;- plot + geom_point(aes(y = earnings, x = s, 
+                          color = male))
+plot &lt;- plot + geom_smooth(aes(y = earnings, x = s), 
+                           method = "lm", formula = y ~ x)
+plot
+```
+
+---
+
+# Drawing a Regression Line through the Data 
+
+&lt;img src="index_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Drawing a Regression Line through the Data by Gender
+
+
+```r
+plot &lt;- ggplot(earnings)
+plot &lt;- plot + geom_point(aes(y = earnings, x = s, 
+                          color = male))
+plot &lt;- plot + geom_smooth(aes(y = earnings, x = s, color = male), 
+                           method = "lm", formula = y ~ x)
+plot
+```
+
+---
+
+# Drawing a Regression Line through the Data by Gender
+
+&lt;img src="index_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Changing the ENTIRE THEME of the Plot 
+
+
+```r
+plot &lt;- ggplot(earnings)
+plot &lt;- plot + geom_point(aes(y = earnings, x = s, 
+                          color = male))
+plot &lt;- plot + geom_smooth(aes(y = earnings, x = s, color = male), 
+                           method = "lm", formula = y ~ x)
+plot &lt;- plot + theme_economist()
+plot
+```
+
+---
+
+# Changing the ENTIRE THEME of the Plot 
+
+&lt;img src="index_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# The *rmarkdown* package
+
+- A `\(LaTeX\)`-like typesetting package with ability to output to a number of formats:
+
+  - PDF &amp; Beamer
+  
+  - MS Word &amp; PowerPoint
+  
+  - HTML notebooks &amp; slides
+
+---
+
+# The *rmarkdown* package
+
+- The biggest advantage that RMarkdown provides me is the ability to dynamically generate plots for my lecture slides.
+
+- That is, when I make slides for the class, I also make the plots along with the slides and have RMarkdown output the plots at the same time as it produces the slides.
+
+- This is very useful when I want to make iterative changes to my plots, as is the case in most statistics teaching. 
+
+---
+
+# Example
+
+Putting the following codes in RMarkdown...
+
+
+```r
+plot &lt;- ggplot(data.frame(x = c(-4, 4)), aes(x = x)) + ylim(0,0.4) + xlab("z") + ylab("pdf") +
+        stat_function(fun = dnorm,  args = list(1, 1)) +
+        geom_area(stat = "function", fun = dnorm, args = list(1, 1), fill = "#85929E", xlim = c(-4, 1.5)) +
+        stat_function(fun = dnorm,  args = list(-1, 1)) +
+        geom_area(stat = "function", fun = dnorm, args = list(-1, 1), fill = "#C39BD3", xlim = c(1.5, 4)) +
+        theme_classic() + scale_x_discrete(limit = c(-3, -2, -1, 0, 1, 2, 3),
+        labels = c("-2","-1", "0", "1", "2", "3", "4")) +
+        annotate('text', x = 2.15, y = 0.05, label = "Type I Error", size=4)  +
+        annotate('text', x = -2, y = 0.05, label = "Type II Error", size=4)  +
+        theme(axis.text=element_text(size=11.5)) 
+plot
+```
+
+produces the following plot in the slides:
+
+---
+
+# Tradeoff between Type I and Type II Errors
+&lt;img src="index_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
+---
+
+# Example
+
+- Then, if I want to make any adjustments to this plot, I can just make that change directly in the code. 
+
+- Next time I run this RMarkdown document, the plot will be updated accordingly. 
+
+- RMarkdown also creates beautiful presentations...
+
+...
+
+...
+
+- ... like this one
+
+---
+
+# Other Cool Things
+
+- The *shiny* package for designing interactive web applications.
+
+- Sample student work: creating an interface to predict golfers' performances in major PGA tournaments - [Lucas Wiebenga](https://lukewieb.shinyapps.io/thesis2019/)
+
+---
+
+class: inverse, center, middle
+name: conclusion
+
+# Conclusion
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=796px&gt;&lt;/html&gt;
+
+---
+
+# Wrapping Up
+
+- R is a free, cross-platform statistical software with powerful capabilities and a vast user-created libraries of functions that can accompany any level of learning, from beginning to expert.
+
+- It is suited to be used as a tool in both teaching and research. 
+
+- Its open-source nature and its lack of technical support can result in a steep learning curve, especially for students who are not familiar with command-line programming. 
+
+- I recommend gradual build up of materials, with more time spend at the beginning to guide students through basic functions.
+
+- If you are interested in switching to R, I'll be happy to answer any questions or addressing any concerns/comments!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

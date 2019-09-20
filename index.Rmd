@@ -8,11 +8,11 @@ output:
   xaringan::moon_reader:
     #css: [default, metropolis, metropolis-fonts] 
     lib_dir: libs
+    incremental: true
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-
 ---
 
 ```{r setup, include=FALSE}
@@ -166,13 +166,16 @@ a = 2 + 2
 a <- 2 + 2
 ```
 
+--
+
 - This is clearly nonsense, but oh well.
 
+--
 ---
 
 # R Basics 
 
-- As an instructor of various methods classes, I use R primarily to teach statistical analysis.
+- I use R primarily to teach statistical analysis.
 
 - R can perform all the standard functions, such as:
 
@@ -510,11 +513,19 @@ plot
 
 - RMarkdown also creates beautiful presentations...
 
-...
+--
 
 ...
+
+--
+
+...
+
+--
 
 - ... like this one
+
+--
 
 ---
 

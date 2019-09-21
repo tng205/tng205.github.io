@@ -248,7 +248,7 @@ name: incor
 
 - A majority of them will voluntarily do these extra components.
 
-- It helps if you have a project component that allows students to use R to conduct their own analyses of a quesiton they are interested in, though this is time consuming.
+- It helps if you have a project component that allows students to use R to conduct their own analyses of a question they are interested in, though this is time consuming.
 ---
 
 class: inverse, center, middle
